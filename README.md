@@ -47,7 +47,8 @@ Register a new user with the API. See example request body below:
 ```
 
 Responds with status code:
-- 200 if record has been succesfully created along with response body below:
+- 400 if invalid JSON has been supplied
+- 200 if record has been succesfully created along with example response body below:
 
 
 ```json
@@ -58,3 +59,19 @@ Responds with status code:
 	  "numOfNotificationsPushed": 0
   }  
 ```
+
+### POST /push-notification-service/pushbullet/notification
+
+Push notification to user for provided 'username'.
+
+```json
+  {
+	"username": "Callum Cooper"
+  }
+```
+
+Status codes
+- 200 ("200 - Push bullet notification sent successfully for $username")
+- 400 if invalid JSON has been supplied
+
+NOTE - Access token must have been provided and stored as a record along with username during registration phase mentioned above for PushBullet note notification to be sent.
