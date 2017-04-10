@@ -1,5 +1,8 @@
 # push-notification-service
-API to distribute notifications to users via the Pushbullet API
+API to distribute notifications to users via the Pushbullet API. The push-notification-service is built in Scala on top of the Play Framework. - https://www.playframework.com/
+
+## Pre-requisites for running the API on a local machine
+Scala Build Tool (SBT) - Homebrew or binary installations can be found here - http://www.scala-sbt.org/download.html
 
 ## Production Endpoints
 
