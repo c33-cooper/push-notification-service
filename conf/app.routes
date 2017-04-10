@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#POST request to register user to push-notification-service
+POST    /register/user                  @controllers.PushNotificationController.registerUser
+
+#GET request to retrieve all users metadata
+GET     /users/user/all                 @controllers.PushNotificationController.sortedUsers
+
+#GET request to find user by username
+GET     /users/user/:username           @controllers.PushNotificationController.userByUsername(username: String)
+
+#POST request to push a notification to a registered user via Pushbullet.
+POST    /pushbullet/notification        @controllers.PushNotificationController.pushBulletNotification
